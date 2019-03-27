@@ -83,7 +83,6 @@ jQuery(document).ready(function($) {
         });
         $("body").off("mouseleave");
       } else {
-	      
         // Hide
         $.when(
           $(function() {
@@ -113,22 +112,21 @@ jQuery(document).ready(function($) {
 
           // Peek
           .then(function() {
-            $.when(setTimeout(function() {}, 1000)).then(function() {
-              //begin then2
-              $("body").on("mouseleave", function() {
-                btn.animate({
-                  marginTop: "60px"
-                });
-                setTimeout(function() {
-                  if (btn.hasClass("hidden")) {
-                    btn.animate({
-                      marginTop: "-60px"
-                    });
-                  }
-                }, 3000);
-              });
+	              $("body").on("mouseleave", function() {
+	              	if (btn.css('margin-top') === '-60px') {
+		                btn.animate({
+		                  marginTop: "60px"
+		                });
+		                setTimeout(function() {
+		                  if (btn.hasClass("hidden")) {
+		                    btn.animate({
+		                      marginTop: "-60px"
+		                    });
+		                  }
+		                }, 3000);
+	              	}
+	              });
             });
-          });
       }
     });
 
@@ -152,7 +150,6 @@ jQuery(document).ready(function($) {
         });
         $("body").off("mouseleave");
       } else {
-	      
         // Hide
         $.when(adminbar.animate({ marginTop: "-60px" })).then(function() {
           btn.css({
@@ -181,5 +178,20 @@ jQuery(document).ready(function($) {
     $(window).resize(function() {
       buttonToggle();
     });
+    
+    // // Screen shake listener - planned for future development
+    // var shakeEvent = new Shake({threshold: 15});
+    // shakeEvent.start();
+    // window.addEventListener('shake', function(){
+    //     alert("I HATH BEEN SHOOK");
+    // }, false);
+
+    // //Stop listening
+    // function stopShake(){
+    //     shakeEvent.stop();
+    // }
+
+    // // Check for shake support
+    // if(!("ondevicemotion" in window)){alert("Not Supported");}
   });
 });
