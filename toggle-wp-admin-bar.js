@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
             ).then(function() {
               btn.css({
                 position: "absolute",
-                "margin-left": "480px" // Change this value to shift the x position of the "Show Adminbar" button
+                "margin-left": "50%" // Change this value to shift the x position of the "Show Adminbar" button
               });
               text.text("Show Adminbar");
               btn.animate({
