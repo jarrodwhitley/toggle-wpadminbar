@@ -12,4 +12,4 @@ This is a simple plugin that hides the wordpress admin bar. Then a mouseleave() 
 For mobile screen widths the "Hide Adminbar" button become an eye-slash icon. You can hide the menu with this button, but to see then admin bar again you'll need to reload.
 
 ## Notes
-This is a very alpha plugin. You may need to make adjustments to make this work for you theme. Please do not put this on your website if you're not familiar with jQuery.
+This is a very alpha plugin. You may need to make adjustments to make this work for your theme. Please do not put this on your website if you're unfamiliar with jQuery.
