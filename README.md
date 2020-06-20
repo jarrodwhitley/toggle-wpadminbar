@@ -1,3 +1,5 @@
+! Please note: This plugin is not being maintained
+
 # toggle-wpadminbar
 A simple jQuery plugin I wrote to temporarily hide the wordpress admin bar. 
 
